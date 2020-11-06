@@ -9,4 +9,9 @@
     <PackageReference Include="OpenTK" Version="4.1.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Engine\" />
+    <Folder Include="Game\" />
+  </ItemGroup>
+
 </Project>

@@ -9,16 +9,18 @@ namespace ProjectGame
         {
             using var client = new Client(new OpenTK.Windowing.Desktop.GameWindowSettings()
             {
-                IsMultiThreaded = true,
-                RenderFrequency = 60,
+                IsMultiThreaded = true,                
                 UpdateFrequency = 60
             },
             new OpenTK.Windowing.Desktop.NativeWindowSettings()
             {
-                IsFullscreen =  true,
+                IsFullscreen = true,
                 API = ContextAPI.OpenGL,
                 APIVersion = new Version(4, 1)
-            });
+            })
+            {
+                VSync = VSyncMode.Adaptive
+            };
 
             client.Run();            
         }
